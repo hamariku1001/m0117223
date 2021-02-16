@@ -1,0 +1,83 @@
+%%% タイトル用マクロ
+\makeatletter
+
+\def\jtitle#1{\long\def\@jtitle{#1}}
+\def\@jtitle{}
+\def\etitle#1{\long\def\@etitle{#1}}
+\def\@etitle{}
+
+\def\jauthor#1{\long\def\@jauthor{#1}}
+\def\@jauthor{}
+\def\eauthor#1{\long\def\@eauthor{#1}}
+\def\@eauthor{}
+
+\def\jaffiliation#1{\long\def\@jaffiliation{#1}}
+\def\@jaffiliation{}
+\def\eaffiliation#1{\long\def\@eaffiliation{#1}}
+\def\@eaffiliation{}
+
+\def\email#1{\long\def\@email{#1}}
+\def\@email{}
+
+\def\jabstract#1{\long\def\@jabstract{#1}}
+\def\@jabstract{}
+\def\eabstract#1{\long\def\@eabstract{#1}}
+\def\@eabstract{}
+
+\def\jkeyword#1{\long\def\@jkeyword{#1}}
+\def\@jkeyword{}
+\def\ekeyword#1{\long\def\@ekeyword{#1}}
+\def\@ekeyword{}
+
+\def\@maketitle{
+%\vspace*{5truemm}
+{\Large \begin{center}\@jtitle\end{center}}
+{\large \begin{center}\@jauthor\end{center}}
+\vspace{-3truemm}
+{\large \begin{center}\@jaffiliation\end{center}}
+\vspace{-6truemm}
+\begin{center}\texttt{E-mail: \@email}\end{center}
+\vspace{-3truemm}
+\begin{quote}\textbf{あらまし} \quad \@jabstract\end{quote}
+\vspace{-5truemm}
+\begin{quote}\textbf{キーワード} \quad \@jkeyword\end{quote}
+
+\vspace{-2truemm}
+{\Large \begin{center}\@etitle\end{center}}
+\vspace{-3truemm}
+{\large \begin{center}\textbf{\@eauthor}\end{center}}
+\vspace{-3truemm}
+{\normalsize \begin{center}\@eaffiliation\end{center}}
+\vspace{-6truemm}
+\begin{center}\texttt{E-mail: \@email}\end{center}
+\vspace{-3truemm}
+\begin{quote}\textbf{Abstract} \quad \@eabstract\end{quote}
+\vspace{-5truemm}
+\begin{quote}\textbf{Keyword} \quad \@ekeyword\end{quote}
+}
+\makeatother
+
+% 本文横幅
+\setlength{\textwidth}{170truemm}
+
+% 本文縦幅
+\setlength{\textheight}{240truemm}
+
+% 上部マージン調整
+\setlength{\topmargin}{-10truemm}
+
+% 奇数ページ左余白
+\setlength{\oddsidemargin}{-4truemm}
+
+% 偶数ページ左余白
+\setlength{\evensidemargin}{\oddsidemargin}
+
+% 図キャプションと図との間隔
+\setlength{\abovecaptionskip}{-0.5truemm}
+
+% 表キャプションと表との間隔
+\setlength{\belowcaptionskip}{1.5truemm}
+
+% 二段組みの間隔
+\setlength{\columnsep}{6truemm}
+

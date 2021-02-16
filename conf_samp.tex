@@ -1,0 +1,49 @@
+\documentclass[a4paper,twocolumn]{jsarticle}
+%\documentclass[a4j,twocolumn]{jarticle} % 'jsarticle' が使えない場合はこちらを利用
+
+% 上記 documentclass のオプションは自由に追加してもよい。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ページ設定 (この項目は論文著者は編集しないこと。)
+
+% 芸術科学会学術会議用スタイルパッケージ
+\usepackage{artsci-conf-j} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% パッケージ一覧 (必要なパッケージを任意に追加してよい)
+
+\usepackage{amsmath, amssymb}	% AMS-LaTeX
+\usepackage[dvipdfmx]{graphicx}	% 「graphics」パッケージに変更してもよい。
+\usepackage{float}		% 図表が記述位置から飛ばないためのパッケージ
+\usepackage{url}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% マクロ一覧 (必要なマクロをこの部分に記述)
+
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 図ファイルのパス設定
+
+\graphicspath{{fig/}}
+
+%% タイトル，概要，キーワードなど
+\input{src/preface.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ここより論文本体
+\pagestyle{empty}
+
+\begin{document}
+\maketitle
+
+\input{src/intro}
+\input{src/conclusion}
+
+\bibliography{bibtex_samp} % BibTeX ファイル (.bib) を記述
+\bibliographystyle{junsrt} % 番号を掲載順にソートする。
+
+\end{document}
